@@ -8,6 +8,7 @@
           @foreach ($articles as $article)
             <li class="list-group-item">
               {{ $article->id }}
+              <li><a href="{{ route('article.show', $article->id) }}">{{ $article->title }}</a></li>
             </li>
           @endforeach
         </ul>

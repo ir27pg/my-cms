@@ -18,4 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('articles', ArticleController::class);
+Route::get('/articles', [ArticleController::class, 'index'])
+    ->name('article');
+
+Route::get('/articles/{id}', [ArticleController::class, 'show'])
+    ->name('article.show');

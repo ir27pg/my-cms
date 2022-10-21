@@ -39,3 +39,4 @@
 - https://readouble.com/laravel/9.x/ja/views.html
 -- view作成とcompactメソッドへの配列を渡している。
 -- 渡した変数から->linksとかで、データ取得できる。
+-- route()を使い、viewの中でurlを作成する。
