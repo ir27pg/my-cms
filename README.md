@@ -110,13 +110,12 @@
   - 多対多は、各Modelにリレーションを設定する。
 
 - ログインの追加
--- https://book.cakephp.org/3/ja/tutorials-and-examples/cms/authentication.html#id2
--- cakeの認証はコンポーネントによって処理できる。Laravelは「ガード」と「プロバイダ」で構成されている。
--- Laravel breezeを利用して今回は実装する。
--- https://readouble.com/laravel/9.x/ja/starter-kits.html#laravel-breeze
--- これで、いらん認証機能がたくさん入った。一旦。機能理解はこれでいいかも。
--- 最初にしないと、ルーティングとかふっとばされた。
--- 
+  - https://book.cakephp.org/3/ja/tutorials-and-examples/cms/authentication.html#id2
+  - cakeの認証はコンポーネントによって処理できる。Laravelは「ガード」と「プロバイダ」で構成されている。
+  - Laravel breezeを利用して今回は実装する。
+  - https://readouble.com/laravel/9.x/ja/starter-kits.html#laravel-breeze
+  - これで、いらん認証機能がたくさん入った。一旦。機能理解はこれでいいかも。
+  - 最初にしないと、ルーティングとかふっとばされた。
 
 # 結果
 
