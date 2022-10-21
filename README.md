@@ -59,3 +59,8 @@
 --  https://book.cakephp.org/3/ja/tutorials-and-examples/cms/articles-controller.html#edit
 -- コントローラーのeditに追加にする。creatの処理や更新処理もmodelに書くべき
 -- 一旦、この処理飛ばす。後で時間あればやる。
+
+- タグの処理
+--  https://book.cakephp.org/3/ja/tutorials-and-examples/cms/tags-and-users.html#id1
+-- bakeでテーブル情報を元にテンプレートを自動生成。laravelにはなさそう。
+-- ここから、bakeで省かれているので記載が必要。
