@@ -33,6 +33,10 @@
 -- ページネーションを実装。くっそ簡単。クエリにpeginationつけるだけ。
 -- 
 
+
+- Seedの作成(これは多分ないけど、ないと確認できないので先に作る。)
+-- https://readouble.com/laravel/9.x/ja/seeding.html
+
 - テンプレートの作成
 -- https://book.cakephp.org/3/ja/tutorials-and-examples/cms/articles-controller.html#id1
 - Laravelでviewにbladeテンプレートを利用することで、きれいに出しやすい。
