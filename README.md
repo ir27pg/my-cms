@@ -31,4 +31,5 @@
 -- Controllerの中でモデル経由で、データを取得。viewを作成し返答する。
 -- Modelで利用できる、クエリを叩きデータを取る
 
-- 
+- Seedの作成(これは多分ないけど、ないと確認できないので先に作る。)
+-- https://readouble.com/laravel/9.x/ja/seeding.html
