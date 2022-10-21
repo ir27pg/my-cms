@@ -1,5 +1,14 @@
 # CakePHPのチュートリアルのCMSチュートリアルをLaravelで実装する
 
+# 目的
+- Laravelを触っていない。(GoとかReactとか。。)
+
+- LaravelとCakePHPの違いを知りたい。
+
+- チュートリアルあると、誰か嬉しいかも。。
+
+# 実施事項
+
 - コンテンツ管理チュートリアル
   - https://book.cakephp.org/3/ja/tutorials-and-examples/cms/installation.html#cakephp
 - CakePHPの取得
@@ -13,8 +22,10 @@
     - https://readouble.com/laravel/9.x/ja/migrations.html
     - 作成及び更新の場合は、適宜ファイルを作成する。
     - 命名規則(XXXX_create,XXXX_modify)を意識
+    - 中間テーブルの命名規則にも注意
   - この段階でCakeではデータを挿入しているので、LaravelではSeederを利用し挿入する。
     - https://readouble.com/laravel/9.x/ja/seeding.html
+
 
 - データベースの設定
   - https://book.cakephp.org/4/ja/tutorials-and-examples/cms/database.html#id1
@@ -67,6 +78,7 @@
   - コントローラーのedit及びupdateに追加にする。createの処理や更新処理もmodelに書くべき
   - 記事がない等の処理は「findOrFail」で判定できる。
   - モデルでupdate処理を実装して、呼び出す。
+  - https://readouble.com/laravel/9.x/ja/eloquent.html
 
 - 記事の編集(テンプレート)
   - https://book.cakephp.org/4/ja/tutorials-and-examples/cms/articles-controller.html#id6
@@ -80,12 +92,22 @@
 - 記事の削除
   - https://book.cakephp.org/4/ja/tutorials-and-examples/cms/articles-controller.html#delete
   - Cakeはコントローラーが比較的複雑。
-  - 
+  - https://readouble.com/laravel/9.x/ja/eloquent.html
 
 - タグの処理
---  https://book.cakephp.org/3/ja/tutorials-and-examples/cms/tags-and-users.html#id1
--- bakeでテーブル情報を元にテンプレートを自動生成。laravelにはなさそう。
--- ここから、bakeで省かれているので記載が必要。
+  -  https://book.cakephp.org/3/ja/tutorials-and-examples/cms/tags-and-users.html#id1
+  - bakeでテーブル情報を元にテンプレートを自動生成。laravelにはなさそう。
+  - ここから、bakeで省かれているので記載が必要。
+
+- タグの作成(Controller,View)
+  - Articleの作成と同様の処理を実装する。
+
+- 記事へのタグの追加
+  - https://book.cakephp.org/4/ja/tutorials-and-examples/cms/tags-and-users.html#id1
+  - 「 $this->belongsToMany('Tags'); 」でテーブル作成時に定義すればOK?
+  - https://readouble.com/laravel/9.x/ja/eloquent-relationships.html
+  - LaravelはModelで1対多の取得を書く。中間テーブルカラムの取得をうまく使う。
+  - 多対多は、各Modelにリレーションを設定する。
 
 - ログインの追加
 -- https://book.cakephp.org/3/ja/tutorials-and-examples/cms/authentication.html#id2
@@ -95,3 +117,13 @@
 -- これで、いらん認証機能がたくさん入った。一旦。機能理解はこれでいいかも。
 -- 最初にしないと、ルーティングとかふっとばされた。
 -- 
+
+# 結果
+
+- Laravel少し思い出した。(案件よろしくお願いします。)
+
+- テンプレートの書き方とか、バージョンの速度とか。
+  - 規約に従ってください等の文言が多い。厳しそう。
+  - あと、bakeすごそう。。
+
+- これは、もう少しきれいにしていく。(技術時間ですすめる。)

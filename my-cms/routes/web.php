@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\TagController;
 
 
 /*
@@ -45,6 +46,13 @@ Route::middleware('auth')->group(function () {
 
     Route::post('/edit/{id}', [ArticleController::class, 'update'])
         ->name('article.update');
+
+    Route::get('/tags/post', function () {
+        return view('tags.store');
+    })->name('tag.store');
+
+    Route::post('/tags/post', [TagController::class, 'store'])
+        ->name('tags.store');
 });
 
 require __DIR__ . '/auth.php';
