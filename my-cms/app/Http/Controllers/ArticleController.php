@@ -27,7 +27,6 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
     }
 
     /**
@@ -38,7 +37,14 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Article::create([
+            'user_id' => "1",
+            'tag_id' => "1",
+            'title' => $request->title,
+            'slug' => "slug",
+            "body" => $request->body,
+            "published" => true
+        ]);
     }
 
     /**
