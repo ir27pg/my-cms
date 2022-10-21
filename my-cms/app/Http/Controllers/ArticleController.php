@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Article;
+use Illuminate\Support\Str;
 
 
 class ArticleController extends Controller
@@ -40,10 +41,12 @@ class ArticleController extends Controller
         Article::create([
             'user_id' => "1",
             'title' => $request->title,
-            'slug' => "slug",
+            'slug' => Str::random(10),
             "body" => $request->body,
             "published" => true
         ]);
+
+        return redirect('/articles');
     }
 
     /**
@@ -81,6 +84,13 @@ class ArticleController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $article = Article::findOrFail($id);
+        $article->title = $request->title;
+        $article->body = $request->body;
+
+        $article->save();
+
+        return redirect('/articles');
     }
 
     /**

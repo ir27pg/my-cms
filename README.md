@@ -54,19 +54,22 @@
   - route()を使い、viewの中でurlを生成し編集画面へルーティングしている。
 
 - 記事の追加
--- https://book.cakephp.org/3/ja/tutorials-and-examples/cms/articles-controller.html#id3
--- コントローラーのstoreに追加にする(addでもいいかも)
--- CakePHP個々の処理は少しめんどくさそう。
--- laravelはコントローラーで受けたリクエストをmodelに挿入しsaveするのみ。
--- 基本的に、fill-saveでなくcreateメソッドを利用することが多い。
--- repositoryを作成し、共通化することも多いが今回はしない。
--- cakeでは、データ作成前にbeforeSave()なるものを呼び出して、登録前に処理を実施している。laravelだとイベントで処理するのかな。
---- これはめんどくさいから後で実装。
+  - https://book.cakephp.org/3/ja/tutorials-and-examples/cms/articles-controller.html#id3
+  - コントローラーのstoreに追加にする(addでもいいかも)
+  - CakePHP個々の処理は少しめんどくさそう。
+  - 基本的に、fill-saveでなくcreateメソッドを利用することが多い。
+  - repositoryを作成し、共通化することも多いが今回はしない。
+  - cakeでは、データ作成前にbeforeSave()なるものを呼び出して、登録前に処理を実施している。laravelだとイベントで処理するのかな。
+  - これはめんどくさいから後で実装。
 
-- 記事の編集
---  https://book.cakephp.org/3/ja/tutorials-and-examples/cms/articles-controller.html#edit
--- コントローラーのeditに追加にする。creatの処理や更新処理もmodelに書くべき
--- 一旦、この処理飛ばす。後で時間あればやる。
+- 記事の編集(Controller)
+  -  https://book.cakephp.org/3/ja/tutorials-and-examples/cms/articles-controller.html#edit
+  - コントローラーのedit及びupdateに追加にする。createの処理や更新処理もmodelに書くべき
+  - 記事がない等の処理は「findOrFail」で判定できる。
+
+- 記事の編集(テンプレート)
+  - https://book.cakephp.org/4/ja/tutorials-and-examples/cms/articles-controller.html#id6
+  - 
 
 - タグの処理
 --  https://book.cakephp.org/3/ja/tutorials-and-examples/cms/tags-and-users.html#id1

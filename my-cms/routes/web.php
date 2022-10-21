@@ -32,12 +32,15 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/post', function () {
         return view('store');
-    });
+    })->name('article.store');;;
 
     Route::post('/post', [ArticleController::class, 'store']);
 
-    Route::get('/edit', [ArticleController::class, 'edit'])
+    Route::get('/edit/{id}', [ArticleController::class, 'edit'])
         ->name('article.edit');
+
+    Route::post('/edit/{id}', [ArticleController::class, 'update'])
+        ->name('article.update');
 });
 
 require __DIR__ . '/auth.php';
