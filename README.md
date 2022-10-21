@@ -3,7 +3,7 @@
 # 目的
 - Laravelを触っていない。(GoとかReactとか。。)
 
-- LaravelとCakePHPの違いを知りたい。
+- LaravelとCakePHPの違い
 
 - チュートリアルあると、誰か嬉しいかも。。
 
