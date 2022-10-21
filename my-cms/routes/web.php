@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
+use App\Models\Article;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,9 @@ Route::get('/articles', [ArticleController::class, 'index'])
 
 Route::get('/articles/{id}', [ArticleController::class, 'show'])
     ->name('article.show');
+
+Route::get('/post', function () {
+    return view('store');
+});
+
+Route::post('/post', [ArticleController::class, 'store']);

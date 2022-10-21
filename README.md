@@ -44,3 +44,13 @@
 -- view作成とcompactメソッドへの配列を渡している。
 -- 渡した変数から->linksとかで、データ取得できる。
 -- route()を使い、viewの中でurlを作成する。
+
+- 記事の追加
+-- https://book.cakephp.org/3/ja/tutorials-and-examples/cms/articles-controller.html#id3
+-- コントローラーのstoreに追加にする(addでもいいかも)
+-- CakePHP個々の処理は少しめんどくさそう。
+-- laravelはコントローラーで受けたリクエストをmodelに挿入しsaveするのみ。
+-- 基本的に、fill-saveでなくcreateメソッドを利用することが多い。
+-- repositoryを作成し、共通化することも多いが今回はしない。
+-- cakeでは、データ作成前にbeforeSave()なるものを呼び出して、登録前に処理を実施している。laravelだとイベントで処理するのかな。
+--- これはめんどくさいから後で実装。
