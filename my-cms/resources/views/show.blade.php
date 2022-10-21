@@ -16,6 +16,13 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                   <a href="{{ route('article.edit', $article->id) }}">Edit</a>
                 </div>
+                <div class="p-6 bg-white border-b border-gray-200">
+                  <form onsubmit="return confirm('本当に削除しますか？')" action="{{ route('article.destroy', $article->id) }}" method="post">
+                    @csrf 
+                    @method('delete')
+                    <button type="submit">Delete</button>
+                </form>
+                </div>
             </div>
         </div>
     </div>

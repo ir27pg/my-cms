@@ -30,11 +30,15 @@ Route::middleware('auth')->group(function () {
     Route::get('/articles/{id}', [ArticleController::class, 'show'])
         ->name('article.show');
 
+
     Route::get('/post', function () {
         return view('store');
     })->name('article.store');;;
 
     Route::post('/post', [ArticleController::class, 'store']);
+
+    Route::delete('/articles/{id}', [ArticleController::class, 'destroy'])
+        ->name('article.destroy');
 
     Route::get('/edit/{id}', [ArticleController::class, 'edit'])
         ->name('article.edit');

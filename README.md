@@ -66,9 +66,20 @@
   -  https://book.cakephp.org/3/ja/tutorials-and-examples/cms/articles-controller.html#edit
   - コントローラーのedit及びupdateに追加にする。createの処理や更新処理もmodelに書くべき
   - 記事がない等の処理は「findOrFail」で判定できる。
+  - モデルでupdate処理を実装して、呼び出す。
 
 - 記事の編集(テンプレート)
   - https://book.cakephp.org/4/ja/tutorials-and-examples/cms/articles-controller.html#id6
+  - routeでcontrollerを呼び出す。
+
+- validation
+  - https://book.cakephp.org/4/ja/tutorials-and-examples/cms/articles-controller.html#articles
+  - Requestでvalidateを実装する。
+  - https://readouble.com/laravel/9.x/ja/validation.html
+
+- 記事の削除
+  - https://book.cakephp.org/4/ja/tutorials-and-examples/cms/articles-controller.html#delete
+  - Cakeはコントローラーが比較的複雑。
   - 
 
 - タグの処理
