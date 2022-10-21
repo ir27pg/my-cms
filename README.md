@@ -1,17 +1,24 @@
-# my-cms
-- HP用のCMSの作成
+# CakePHPのチュートリアルのCMSチュートリアルをLaravelで実装する
 
-- CakePHPのチュートリアルのCMS作成をLaravelで実装する
+- コンテンツ管理チュートリアル
+  - https://book.cakephp.org/3/ja/tutorials-and-examples/cms/installation.html#cakephp
+- CakePHPの取得
+  - https://book.cakephp.org/4/ja/tutorials-and-examples/cms/installation.html#cakephp
+  - Laravelは以下を参照して取得。
+    - https://readouble.com/laravel/9.x/ja/installation.html
 
 - データベース作成
-- https://book.cakephp.org/4/ja/tutorials-and-examples/cms/database.html
+  - https://book.cakephp.org/4/ja/tutorials-and-examples/cms/database.html
+  - Laravelではデータベースはマイグレーションで作成
+    - https://readouble.com/laravel/9.x/ja/migrations.html
+    - 作成及び更新の場合は、適宜ファイルを作成する。
+    - 命名規則(XXXX_create,XXXX_modify)を意識
+  - この段階でCakeではデータを挿入しているので、LaravelではSeederを利用し挿入する。
+    - https://readouble.com/laravel/9.x/ja/seeding.html
 
-- データベース設計
-- https://cacoo.com/diagrams/nNx02ysV3Zq8DgUR/0724F
-
-- Laravelでは、データベースはマイグレーションで作成する
-- - 作成の場合及び更新の場合は、適宜ファイルを作成する。
-- - 命名規則(XXXX_create,XXXX_modify)を意識する。
+- データベースの設定
+  - https://book.cakephp.org/4/ja/tutorials-and-examples/cms/database.html#id1
+  - Laravelでは、「config/database.php」に記載がある。(.envから取得している。)
 
 - モデルの作成
 - - https://book.cakephp.org/3/ja/tutorials-and-examples/cms/database.html#id2

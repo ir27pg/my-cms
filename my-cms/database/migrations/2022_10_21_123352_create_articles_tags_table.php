@@ -13,13 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('articles', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('user_id')->constrained('users');
-            $table->string('title');
-            $table->string('slug')->unique();
-            $table->text('body');
-            $table->boolean('published');
+        Schema::create('articles_tags', function (Blueprint $table) {
+            $table->foreignId('article_id')->constrained('articles');
+            $table->foreignId('tag_id')->constrained('tags');
+            $table->primary(['article_id', 'tag_id']);
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('articles');
+        Schema::dropIfExists('articles_tags');
     }
 };

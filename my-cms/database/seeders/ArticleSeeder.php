@@ -18,10 +18,9 @@ class ArticleSeeder extends Seeder
     {
         DB::table('articles')->insert([
             'user_id' => '1',
-            'tag_id' => '1',
-            'title' => Str::random(10),
+            'title' => Str::random(8),
             'slug' => Str::random(10),
-            'body' => Str::random(15),
+            'body' => Str::random(300),
             'published' => true,
         ]);
     }
