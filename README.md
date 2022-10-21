@@ -20,12 +20,13 @@
   - https://book.cakephp.org/4/ja/tutorials-and-examples/cms/database.html#id1
   - Laravelでは、「config/database.php」に記載がある。(.envから取得している。)
 
-- モデルの作成
-- - https://book.cakephp.org/3/ja/tutorials-and-examples/cms/database.html#id2
-
-- Laravelでは、Eloquentで作成する。
-- https://readouble.com/laravel/8.x/ja/eloquent.html
-- - 命名規則(アッパーキャメル)、対応するテーブルを単数形にしたものをファイル名とする。
+- モデルの作成(Article)
+  - https://book.cakephp.org/3/ja/tutorials-and-examples/cms/database.html#id2
+  - LaravelでもModelを作成する。(Eloquent)
+  - https://readouble.com/laravel/8.x/ja/eloquent.html
+  - 命名規則(アッパーキャメル)、対応するテーブルを単数形にしたものをファイル名とする。
+  - laravelでは、「$table->timestamps();」をマイグレーション時呼び出せばOK
+  - アクセス可能なものに関しては、「$fillable」を作成しておく。
 
 
 - Articlesコントローラーの作成
