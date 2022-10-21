@@ -28,30 +28,30 @@
   - laravelでは、「$table->timestamps();」をマイグレーション時呼び出せばOK
   - アクセス可能なものに関しては、「$fillable」を作成しておく。
 
-
 - Articlesコントローラーの作成
-- - https://book.cakephp.org/3/ja/tutorials-and-examples/cms/articles-controller.html#cms-articles
+  - https://book.cakephp.org/3/ja/tutorials-and-examples/cms/articles-controller.html#cms-articles
+  - Laravelでもコントローラーを作成する。
+  - https://readouble.com/laravel/9.x/ja/controllers.html
+  - 命名規則(アッパーキャメル)、ファイル名の最後を「Controller」とする。
+  - ルーティングは、Laravelはroute(web.phpなど)を登録してあげControllerやviewを呼ぶ。(たぶん、Cakeも似た感じ)
+  - Controllerの中でモデル経由で、データを取得。viewを作成し返答する。
+  - ページネーションを実装。クエリにpeginationつけるだけ。
+  - compactメソッドで変数をviewへ渡し、整形したviewをレスポンスで返している。
 
-- Laravelでは、コントローラーを作成する。
-- https://readouble.com/laravel/9.x/ja/controllers.html
--- 命名規則(アッパーキャメル)、ファイル名の最後を「Controller」とする。
--- CakePHPは、任意でルーティングされそう？？、LaravelはRouteを登録してあげる必要あり。
--- Controllerの中でモデル経由で、データを取得。viewを作成し返答する。
--- Modelで利用できる、クエリを叩きデータを取る
--- ページネーションを実装。くっそ簡単。クエリにpeginationつけるだけ。
--- 
+- Viewの作成(ページ一覧)
+  - https://book.cakephp.org/3/ja/tutorials-and-examples/cms/articles-controller.html#id1
+  - Laravelではviewにbladeテンプレートを利用することが可能。cakeのテンプレートはphpままっぽい。
+  - https://readouble.com/laravel/9.x/ja/views.html
+  - 渡した変数から->linksとかで、データ取得できる。(paginationでの実装)
+  - route()を使い、viewの中でurlを生成している。
 
+- viewアクションの作成
+  - https://book.cakephp.org/4/ja/tutorials-and-examples/cms/articles-controller.html#view
+  - controllerでリクエストの処理を増やすことでいける。
 
-- Seedの作成(これは多分ないけど、ないと確認できないので先に作る。)
--- https://readouble.com/laravel/9.x/ja/seeding.html
-
-- テンプレートの作成
--- https://book.cakephp.org/3/ja/tutorials-and-examples/cms/articles-controller.html#id1
-- Laravelでviewにbladeテンプレートを利用することで、きれいに出しやすい。
-- https://readouble.com/laravel/9.x/ja/views.html
--- view作成とcompactメソッドへの配列を渡している。
--- 渡した変数から->linksとかで、データ取得できる。
--- route()を使い、viewの中でurlを作成する。
+- viewテンプレートの作成
+  - https://book.cakephp.org/4/ja/tutorials-and-examples/cms/articles-controller.html#id2
+  - route()を使い、viewの中でurlを生成し編集画面へルーティングしている。
 
 - 記事の追加
 -- https://book.cakephp.org/3/ja/tutorials-and-examples/cms/articles-controller.html#id3

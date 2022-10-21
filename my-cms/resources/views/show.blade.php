@@ -13,6 +13,9 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                   {{ $article->body }}
                 </div>
+                <div class="p-6 bg-white border-b border-gray-200">
+                  <a href="{{ route('article.edit', $article->id) }}">Edit</a>
+                </div>
             </div>
         </div>
     </div>

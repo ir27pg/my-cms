@@ -39,7 +39,6 @@ class ArticleController extends Controller
     {
         Article::create([
             'user_id' => "1",
-            'tag_id' => "1",
             'title' => $request->title,
             'slug' => "slug",
             "body" => $request->body,

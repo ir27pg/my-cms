@@ -35,6 +35,9 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::post('/post', [ArticleController::class, 'store']);
+
+    Route::get('/edit', [ArticleController::class, 'edit'])
+        ->name('article.edit');
 });
 
 require __DIR__ . '/auth.php';
