@@ -30,5 +30,12 @@
 -- CakePHPは、任意でルーティングされそう？？、LaravelはRouteを登録してあげる必要あり。
 -- Controllerの中でモデル経由で、データを取得。viewを作成し返答する。
 -- Modelで利用できる、クエリを叩きデータを取る
+-- ページネーションを実装。くっそ簡単。クエリにpeginationつけるだけ。
+-- 
 
-- 
+- テンプレートの作成
+-- https://book.cakephp.org/3/ja/tutorials-and-examples/cms/articles-controller.html#id1
+- Laravelでviewにbladeテンプレートを利用することで、きれいに出しやすい。
+- https://readouble.com/laravel/9.x/ja/views.html
+-- view作成とcompactメソッドへの配列を渡している。
+-- 渡した変数から->linksとかで、データ取得できる。
