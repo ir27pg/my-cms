@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
-use App\Models\Article;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,14 +19,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/articles', [ArticleController::class, 'index'])
-    ->name('article');
+Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
 
-Route::get('/articles/{id}', [ArticleController::class, 'show'])
-    ->name('article.show');
+    Route::get('/articles', [ArticleController::class, 'index'])
+        ->name('article');
 
-Route::get('/post', function () {
-    return view('store');
+    Route::get('/articles/{id}', [ArticleController::class, 'show'])
+        ->name('article.show');
+
+    Route::get('/post', function () {
+        return view('store');
+    });
+
+    Route::post('/post', [ArticleController::class, 'store']);
 });
 
-Route::post('/post', [ArticleController::class, 'store']);
+require __DIR__ . '/auth.php';
