@@ -54,3 +54,8 @@
 -- repositoryを作成し、共通化することも多いが今回はしない。
 -- cakeでは、データ作成前にbeforeSave()なるものを呼び出して、登録前に処理を実施している。laravelだとイベントで処理するのかな。
 --- これはめんどくさいから後で実装。
+
+- 記事の編集
+--  https://book.cakephp.org/3/ja/tutorials-and-examples/cms/articles-controller.html#edit
+-- コントローラーのeditに追加にする。creatの処理や更新処理もmodelに書くべき
+-- 一旦、この処理飛ばす。後で時間あればやる。
