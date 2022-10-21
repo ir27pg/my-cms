@@ -15,9 +15,9 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = Article::all();
+        $articles = Article::paginate(15);
 
-        //TODO:$articlesを表示するviewを返す。
+        return view('index', compact('articles'));
     }
 
     /**
@@ -49,7 +49,9 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
-        //
+        $article = Article::findOrFail($id);
+
+        return view('show', compact('article'));
     }
 
     /**
